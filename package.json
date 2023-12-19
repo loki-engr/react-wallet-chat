@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.5.1",
     "autoprefixer": "^10.4.11",
     "body-scroll-lock": "^4.0.0-beta.0",
     "postcss": "^8.4.16",
@@ -15,6 +16,7 @@
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
     "react-wallet-chat": "^1.1.1",
+    "react-wallet-chat-v0": "^1.4.8",
     "styled-components": "^5.3.5",
     "tailwindcss": "^3.1.8",
     "web-vitals": "^2.1.4"
@@ -25,7 +27,7 @@
     "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "start": "BROWSER=NONE react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

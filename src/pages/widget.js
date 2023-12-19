@@ -1,11 +1,28 @@
 import React, { useState } from 'react';
-import {WalletChatWidget} from 'react-wallet-chat'
-import 'react-wallet-chat/dist/index.css'
+import {WalletChatWidget} from 'react-wallet-chat-v0'
+import 'react-wallet-chat-v0/dist/index.css'
+import { Tooltip } from 'antd';
+import { FileSearchOutlined } from '@ant-design/icons';
 
 const Widget = () => {
     const [subPage, setSubPage] = useState("Swap");
+    const [widgetState, setWidgetState] = useState({});
     return (
         <div>
+            <Tooltip title="Chat With Owner">
+  <FileSearchOutlined
+    onClick={() => {
+        setWidgetState(
+        {
+           ...widgetState, 
+          chatAddr: '0x17FA0A61bf1719D12C08c61F211A063a58267A19',
+          isOpen: true
+        }
+      )
+      }
+    }
+  />
+</Tooltip>
         <div className='relative h-[90vh]'>
             <div className='flex justify-around mt-4'>
                 <div className='flex rounded-3xl bg-white p-1'>
@@ -52,7 +69,7 @@ const Widget = () => {
 
             </div>
         </div>
-        <WalletChatWidget />
+        <WalletChatWidget widgetState={widgetState}/>
         </div>
     );
 };
